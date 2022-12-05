@@ -19,7 +19,11 @@ function App(): JSX.Element {
                 alt="koala"
             />
             <header className="App-header">
+<<<<<<< HEAD
                 Heading with React Hooks and TypeScript
+=======
+                UM COS420 with React Hooks and TypeScript
+>>>>>>> upstream/task-functions
             </header>
             <p>
                 Hello World <code>src/App.tsx</code> COS420
