@@ -22,7 +22,11 @@ function App(): JSX.Element {
             </Button>
             <img src="/Users/hannah/Desktop/tasks/src/koala.png" alt="koala" />
             <header className="App-header">
+<<<<<<< HEAD
                 Heading with React Hooks and TypeScript
+=======
+                UM COS420 with React Hooks and TypeScript
+>>>>>>> upstream/task-arrays
             </header>
             <p>
                 Hello World <code>src/App.tsx</code> COS420
