@@ -3,16 +3,34 @@
  * using this formula:
  *      C = (F - 32) * 5/9
  */
-export function fahrenheitToCelius(temperature: number): number {
-    return 0;
+export function fahrenheitToCelius(F: number) {
+    const C = ((F - 32) * 5) / 9;
+    return C;
 }
 
 /**
  * Consumes three numbers and produces their sum. BUT you should only add a number
  * if the number is greater than zero.
  */
-export function add3(first: number, second: number, third: number): number {
-    return 0;
+export function add3(first: number, second: number, third: number) {
+    let total = 0;
+    if (first > 0) {
+        total = total + first;
+    } else {
+        first = 0;
+    }
+    if (second > 0) {
+        total = total + second;
+    } else {
+        second = 0;
+    }
+    if (third > 0) {
+        total = total + third;
+    } else {
+        third = 0;
+    }
+    total = first + second + third;
+    return total;
 }
 
 /**
@@ -20,7 +38,7 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    return message.toUpperCase() + "!";
 }
 
 /**
@@ -28,7 +46,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    return message.endsWith("?");
 }
 
 /**
@@ -37,5 +55,12 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    word = word.toLowerCase();
+    if (word === "yes") {
+        return true;
+    } else if (word === "no") {
+        return false;
+    } else {
+        return null;
+    }
 }
