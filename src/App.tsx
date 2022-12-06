@@ -1,12 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import {
-    add3,
-    convertYesNo,
-    fahrenheitToCelius,
-    isQuestion,
-    shout
-} from "./functions";
+import { bookEndList } from "./arrays";
+import * as functions from "./functions";
 
 function App(): JSX.Element {
     return (
@@ -22,11 +17,7 @@ function App(): JSX.Element {
             </Button>
             <img src="/Users/hannah/Desktop/tasks/src/koala.png" alt="koala" />
             <header className="App-header">
-<<<<<<< HEAD
                 Heading with React Hooks and TypeScript
-=======
-                UM COS420 with React Hooks and TypeScript
->>>>>>> upstream/task-arrays
             </header>
             <p>
                 Hello World <code>src/App.tsx</code> COS420
@@ -54,9 +45,12 @@ function App(): JSX.Element {
         </div>
     );
 }
-console.log(fahrenheitToCelius(-40));
-console.log(add3(6, -3, 9));
-console.log(shout("Hello"));
-console.log(isQuestion("Is this a question?"));
-console.log(convertYesNo("Yes"));
+console.log(functions.fahrenheitToCelius(-40));
+console.log(functions.add3(6, -3, 9));
+console.log(functions.shout("Hello"));
+console.log(functions.isQuestion("Is this a question?"));
+console.log(functions.convertYesNo("yes"));
+
+console.log(bookEndList([1, 2, 3]));
+
 export default App;
