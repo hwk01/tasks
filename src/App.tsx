@@ -1,6 +1,13 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import { bookEndList } from "./arrays";
+/*import {
+    bookEndList,
+    countShortWords,
+    shoutIfExclaiming,
+    stringsToIntegers,
+    tripleNumbers
+} from "./arrays";
+*/
 import * as functions from "./functions";
 
 function App(): JSX.Element {
@@ -51,6 +58,14 @@ console.log(functions.shout("Hello"));
 console.log(functions.isQuestion("Is this a question?"));
 console.log(functions.convertYesNo("yes"));
 
-console.log(bookEndList([1, 2, 3]));
+/*console.log(bookEndList([1, 2, 3]));
+console.log(tripleNumbers([1, 2, 3]));
+console.log(stringsToIntegers(["1", "2", "3"]));
+console.log(shoutIfExclaiming(["Hello", "you", "are", "great!"]));
+console.log(
+    countShortWords(["one", "two", "three", "four", "five", "six", "seven"])
+);
+console.log(["red", "red", "blue", "blue", "green", "red"]);
+*/
 
 export default App;
