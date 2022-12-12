@@ -4,9 +4,11 @@
  * an empty array. If there is one element, the resulting list should
  * the number twice.
  */
-export function bookEndList(numbers: number[]) {
-  const newarray = numbers[(0, numbers.length)];
-  return newarray;
+export function bookEndList(numbers: number[]): number[] {
+    if (Number.isInteger(numbers[0])) {
+        return [numbers[0], numbers[numbers.length - 1]];
+    }
+    return [];
 }
 
 /**
@@ -14,16 +16,19 @@ export function bookEndList(numbers: number[]) {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-  numbers = numbers * 3;
-  return numbers;
+    return numbers.map((numbers: number): number => numbers * 3);
 }
 
 /**
  * Consume an array of strings and convert them to integers. If
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
-export function stringsToIntegers(numbers: string[]): number[] {
-  return [];
+export function stringsToIntegers(numbers: string[]) {
+    const newarray = numbers.map((string) => {
+        const hold = parseInt(string);
+        return isNaN(hold) ? 0 : hold;
+    });
+    return newarray;
 }
 
 /**
@@ -34,7 +39,16 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-  return [];
+    const newarray = amounts.map((string) => {
+        if (string[0] === "$") {
+            const hold2 = string.split("");
+            hold2.splice(0, 1);
+            string = hold2.join("");
+        }
+        const hold = parseInt(string);
+        return isNaN(hold) ? 0 : hold;
+    });
+    return newarray;
 };
 
 /**
@@ -43,15 +57,28 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-  return [];
+    let newarray = messages.map((string) => {
+        if (string.endsWith("!")) return string.toUpperCase();
+        else return string;
+    });
+    newarray = newarray.filter((string) => {
+        if (string.endsWith("?")) return false;
+        else return true;
+    });
+    return newarray;
 };
 
 /**
  * Consumes an array of words and returns the number of words that are LESS THAN
  * 4 letters long.
  */
-export function countShortWords(words: string[]): number {
-  return 0;
+export function countShortWords(words: string[]) {
+    let count = 0;
+    words.filter((string) => {
+        if (string.length < 4) count = count + 1;
+        else return false;
+    });
+    return count;
 }
 
 /**
@@ -60,7 +87,15 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-  return false;
+    const newarray = colors.filter((string) => {
+        if (string === "red") return string;
+        else if (string === "blue") return string;
+        else if (string === "green") return string;
+        else return false;
+    });
+
+    if (colors.length !== newarray.length) return false;
+    return true;
 }
 
 /**
@@ -70,8 +105,15 @@ export function allRGB(colors: string[]): boolean {
  * For instance, the array [1, 2, 3] would become "6=1+2+3".
  * And the array [] would become "0=0".
  */
+
 export function makeMath(addends: number[]): string {
-  return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const newarray = addends.reduce((total: number, n: number) => total + n, 0);
+
+    const joined = addends.join("+");
+    return newarray + "=" + joined;
 }
 
 /**
@@ -84,5 +126,30 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-  return [];
+    let neg = false;
+    const newarray = values.reduce((prev, next) => {
+        if (neg) {
+            return prev;
+        }
+        if (next < 0 && neg == false) {
+            neg = true;
+            return prev;
+        }
+        return prev + next;
+    }, 0);
+    let index;
+    let negative = false;
+    const diffarray = values.map((x: number): number => {
+        if (x < 0 && negative === false) {
+            index = values.indexOf(x);
+            negative = true;
+            return x;
+        } else return x;
+    });
+    if (!index && index !== 0) {
+        diffarray.push(newarray);
+    } else {
+        diffarray.splice(index + 1, 0, newarray);
+    }
+    return diffarray;
 }
