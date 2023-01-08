@@ -24,7 +24,7 @@ function App(): JSX.Element {
             </Button>
             <img src="/Users/hannah/Desktop/tasks/src/koala.png" alt="koala" />
             <header className="App-header">
-                Heading with React Hooks and TypeScript
+                UD CISC275 with React Hooks and TypeScript
             </header>
             <p>
                 Hello World <code>src/App.tsx</code> COS420
