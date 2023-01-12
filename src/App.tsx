@@ -9,6 +9,12 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 } from "./arrays";
 */
 import * as functions from "./functions";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
@@ -24,31 +30,12 @@ function App(): JSX.Element {
             </Button>
             <img src="/Users/hannah/Desktop/tasks/src/koala.png" alt="koala" />
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+                UM COS420 with React Hooks and TypeScript
             </header>
             <p>
-                Hello World <code>src/App.tsx</code> COS420
-            </p>{" "}
-            <Container>
-                <Row>
-                    <Col>
-                        {" "}
-                        <div
-                            style={{ border: "1px solid red", padding: "4px" }}
-                        >
-                            this will be surrounded by a border and padding.
-                        </div>
-                    </Col>
-                    <Col>
-                        {" "}
-                        <div
-                            style={{ border: "1px solid red", padding: "4px" }}
-                        >
-                            this will be surrounded by a border and padding.
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+                Edit <code>src/App.tsx</code> and save. This page will
+                automatically reload.
+            </p>
         </div>
     );
 }
