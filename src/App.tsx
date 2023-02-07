@@ -21,24 +21,12 @@ import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
 
 function App(): JSX.Element {
-    return (
-        <div className="App">
-            <h1> this is a header</h1>
-            <ul>
-                <li>listing things</li>
-                <li>many koalas</li>
-                <li>and kangaroos</li>
-            </ul>
-            <Button onClick={() => console.log("Hello World!")}>
-                /Log Hello World/
-            </Button>
-            <img src="/Users/hannah/Desktop/tasks/src/koala.png" alt="koala" />
-            <header className="App-header">
-                UM COS420 with React Hooks and TypeScript
-            </header>
-            <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
-            <hr></hr>
+    //  return (
+    //   <div>
+    <DoubleHalf></DoubleHalf>;
+    //      </div>
+    // );
+    /*    <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
             <ColoredBox></ColoredBox>
@@ -55,24 +43,7 @@ function App(): JSX.Element {
             <hr />
             <ChangeType></ChangeType>
             <hr />
-            <CycleHoliday></CycleHoliday>
-        </div>
-    );
+            <CycleHoliday></CycleHoliday>   */
 }
-console.log(functions.fahrenheitToCelius(-40));
-console.log(functions.add3(6, -3, 9));
-console.log(functions.shout("Hello"));
-console.log(functions.isQuestion("Is this a question?"));
-console.log(functions.convertYesNo("yes"));
-
-/*console.log(bookEndList([1, 2, 3]));
-console.log(tripleNumbers([1, 2, 3]));
-console.log(stringsToIntegers(["1", "2", "3"]));
-console.log(shoutIfExclaiming(["Hello", "you", "are", "great!"]));
-console.log(
-    countShortWords(["one", "two", "three", "four", "five", "six", "seven"])
-);
-console.log(["red", "red", "blue", "blue", "green", "red"]);
-*/
 
 export default App;

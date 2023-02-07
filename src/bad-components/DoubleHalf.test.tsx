@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { DoubleHalf } from "./DoubleHalf";
+import DoubleHalf from "./DoubleHalf";
 
 describe("DoubleHalf Component tests", () => {
     beforeEach(() => {
